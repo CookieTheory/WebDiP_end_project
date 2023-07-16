@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Dokumentacija</title>
+        <link rel='icon' type='image/x-icon' href='materijali/favicon.ico'>
+        <meta name='author' content='Ivan Lucić'>
+        <meta name='description' content='1.6.2022.'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <link href='css/ilucic.css' rel='stylesheet' type='text/css'>
+        <script defer src='javascript/ilucic.js'></script>
+    </head>
+    <body id='vrh'>
+        <header>
+            <a class='meni' href='#vrh'><img src='materijali/menu.png' width='40' height='40' 
+                                             alt='Menu'></a>
+            <nav>
+                <a href='index.php'>Početna stranica</a>
+                <a href='prijava.php'>Prijava</a>
+                <a href='registracija.php'>Registracija</a>
+                <a href='informacije.php'>Informacije</a>
+                <a href='galerija.php'>Galerija</a>
+            </nav>
+            <div>
+                <a href='index.php'><img src='materijali/ured.png' width='200' height='100' 
+                                         alt='Logo'></a>
+            </div>
+        </header>
+
+        <main>
+            <section>
+
+
+                <h1>Kratak opis projekta:</h1>
+                <h2>Sustav služi za upravljanje odvjetničkim uredom.</h2>
+                <h3>Uloge: Neregistrirani korisnik, Registrirani korisnik, Moderator, Administrator</h3>
+                <h4>Detaljne upute:</h4>
+                <h4>Administrator</h4>
+                <ul>
+                    <li> Kreira/Pregledava/Ažurira kategorije sudskih postupaka (promet, nekretnine, zaštita
+                        osobnih podataka, …) i dodjeljuje moderatore kategorijama.</li>
+                    <li> Pregledava/Ažurira kriterije za napredovanje (broj sudskih postupaka koje je pokrenuo,
+                        broj prihvaćenih zahtjeva za obranom, broj odgovora na savjetovanja). Vidi popis
+                        moderatora koji zadovoljavaju kriterije i može ih promovirati moderatora u administratora.</li>
+                </ul>
+                <h4>Moderator</h4>
+                <ul>
+                    <li>Kreira/Pregledava/Ažurira sudski postupak za kategoriju sudskih postupaka za koju je
+                        zadužen tako da odabere korisnika. Za svaki sudski postupak unosi jedinstveni broj sudskog
+                        postupka, naziv, protuzakonitu radnju, dokaz te datum i vrijeme početka sudskog postupka.
+                        Status sudskog postupka postaje poslan. Kada on otvori sudski postupak on je smatra
+                        tužiteljem.</li>
+                    <li> Kreira/Pregledava/Ažurira obranu za prihvaćeni zahtjev tako da odabere zahtjev i unosi
+                        argumente obrane. Kasnije ažurira datum i vrijeme završetka sudskog postupka te
+                        zaključak postupka (kriv, nije kriv). Ne može ažurirati podatke najmanje 7 dana od početka
+                        sudskog postupka.</li>
+                    <li>Vidi popis pravnih savjetovanja i može odgovoriti korisniku.</li>
+                    <li> Vidi popis zahtjeva za odvjenikom te ih prihvaća ili odbija. Moderator koji je tužitelj ne može
+                        ga istovremeno i zastupati.</li>
+                    <li> Vidi informacije (statistiku) o kriterijima na način da vidi koliko kojeg kriterija je ostvario i
+                        koliko mu još nedostaje do zadovoljavanja uvjeta po odgovarajućem kriteriju.</li>
+                </ul>
+                <h4>Registrirani korisnik</h4>
+                <ul>
+                    <li> Kreira/Pregledava/Ažurira zahtjev za odvjetnikom pri čemu odabire odvjetnika, sudski
+                        postupak koji je pokrenut protiv njega i postavlja sliku sudskog postupaka. Zahtjev se ne
+                        može poslati nakon datuma i vremena početka sudskog postupka.</li>
+                    <li> Vidi popis zahtjeva za odvjetnikom i statusom (prihvaćen, odbijen).</li>
+                    <li> Može zatražiti pravno savjetovanje na način da izabere odvjetnika te unese razlog i opis.
+                        Odabirom odvjetnika vidi popis odgovora na postavljanja pitanja pravnih savjetovanja.</li>
+                    <li> Pregledava statistiku svojih sudskih postupaka (kriv/nije kriv) za odabrano kategoriju
+                        sudskih postupaka.</li>
+                </ul>
+                <h4>Neregistrirani korisnik</h4>
+                <ul>
+                    <li>Vidi rang listu odvjetnika sortirano po broju prihvaćenih zahtjeva za odvjetnikom u
+                        vremenskom razdoblju (od-do).</li>
+                    <li>Vidi galeriju slika sudskog postupka u kategoriji sudskih postupaka uz mogućnost sortiranja
+                        po vremenu trajanja sudskog postupka (vrijeme završetka - vrijeme početka sudskog
+                        postupka) ili zaključka postupka te može filtrirati po tužitelju</li>
+                </ul>
+
+
+            </section>
+
+            <section id="sadrzaj">
+                <h1>ERA DIJAGRAM</h1>
+
+                <figure>
+                    <a href="materijali/era.jpeg"> <img src="materijali/era.jpeg" style="width:1280; height: 720;"></a>
+                </figure>
+            </section>
+
+            <section id="sadrzaj">
+                <h1>POPIS I OPIS SKRIPTA, MAPA MJESTA I NAVIGACIJSKI DIJAGRAM</h1>
+                <ul>
+                    <li>
+                        <p>API</p>
+                        <ul>
+                            <li>
+                                <p>servisi.php - skripta za AJAX provjeru korisničkog imena</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p>CSS</p>
+                        <ul>
+                            <li><p>ilucic.css - css datoteka</p></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p>Javascript</p>
+                        <ul>
+                            <li><p>ilucic.js - javascript datoteka</p></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p>materijali - slike</p>
+                        <ul>
+                            <li><p>Razne slike koje baza pregledava ili sprema</p></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p>privatno - mapa za .htaccess provjeru</p>
+                        <ul>
+                            <li><p>.htaccess - datoteka za provjeru direktorija</p></li>
+                            <li><p>korisnici.php - skripta koja izbacuje sve korisnike</p></li>
+                            <li><p>users.txt - tekstualna datoteka za prijavu .htaccess</p></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li><p>_osnovno.php - skripta za osnovni prikaz stranice</p></li>
+                    <li><p>baza.php - skripta za komunikaciju s bazom</p></li>
+                    <li><p>baza.sql - sql baze</p></li>
+                    <li><p>data.php - skripta za AJAX komuniciranje s bazom</p></li>
+                    <li><p>dnevnikstranica.php - stranica za pregled dnevnika</p></li>
+                    <li><p>dokumentacija.html - stranica dokumentacije</p></li>
+                    <li><p>galerija.php - stranica galerije (neregistrirani korisnik)</p></li>
+                    <li><p>index.php - početna stranica</p></li>
+                    <li><p>informacije.php - stranica informacija (neregistrirani korisnik)</p></li>
+                    <li><p>kategorije.php - stranica dodavanja, ažuriranja i dodjela moderatora kategoriji (admin)</p></li>
+                    <li><p>kreirajZahtjev.php - stranica kreiranja zahtjeva (registrirani korisnik)</p></li>
+                    <li><p>lozinka.php - stranica za promjenu lozinke</p></li>
+                    <li><p>o_autoru.html - stranica o autoru</p></li>
+                    <li><p>obrane.php - stranica za dodavanje argumenta obrane zahtjevu i ažuriranje (moderator)</p></li>
+                    <li><p>odjava.php - skripta za odjavu prijavljenog korisnika</p></li>
+                    <li><p>odvjetnik.php - stranica za postavljanja pitanja odvjetniku (registrirani korisnik)</p></li>
+                    <li><p>otkljucavanje.php - stranica za otkljucavanje i zakljucavanje korisnika (admin)</p></li>
+                    <li><p>pitanja.php - stranica za odgovor na pitanja (moderator)</p></li>
+                    <li><p>popis.php - stranica popisa zahtjeva (registrirani korisnik)</p></li>
+                    <li><p>postupak.php - stranica za kreiranje postupka (moderator)</p></li>
+                    <li><p>prijava.php - stranica za prijavu korisnika</p></li>
+                    <li><p>registracija.php - stranica za registraciju korisnika</p></li>
+                    <li><p>savjetovanja.php - stranica za odabir odvjetnika za postavljanje pitanja (registrirani korisnik)</p></li>
+                    <li><p>stranke.php - stranica za prihvaćanje/odbijanje zahtjeva (moderator)</p></li>
+                    <li><p>sudski.php - stranica za odabir kategorija za kreiranje sudskog postupka (moderator)</p></li>
+                    <li><p>update.php - skripta za ažuriranje zahtjeva (registrirani korisnik)</p></li>
+                    <li><p>upload.php - skripta za kreiranje zahtjeva (registrirani korisnik)</p></li>
+                    <li><p>verifikacija.php - skripta za verifikaciju korisnika</p></li>
+                    <li><p>zahtjevi.php - stranica za pregled i ažuriranje zahtjeva (registrirani korisnik)</p></li>
+                </ul>         
+                <h1>Navigacijski dijagram   </h1>
+                <figure>
+                    <a href="materijali/navigacijski.jpeg"> <img src="materijali/navigacijski.jpeg" style="width:1280; height: 720;"></a>
+                </figure>
+            </section>
+
+            <section>
+                <h1>POPIS I OPIS KORIŠTENIH TEHNOLOGIJA I ALATA</h1>
+                <h2>Apache NetBeans</h2>
+                <p>NetBeans je integrirano razvojno okruženje (IDE) za Javu . NetBeans omogućuje razvoj aplikacija iz skupa modularnih softverskih komponenti koje se nazivaju moduli . NetBeans radi na sustavima Windows , macOS , Linux i Solaris . Osim razvoja Jave, ima proširenja za druge jezike kao što su PHP , C , C++ , HTML5 i JavaScript .
+                    Apache NetBeans vrhunski je Apache projekt posvećen pružanju čvrstih proizvoda za razvoj softvera (Apache NetBeans IDE i Apache NetBeans Platform) koji se bave potrebama programera, korisnika i tvrtki koji se oslanjaju na NetBeans kao osnovu za svoje proizvode.
+                    Dva osnovna proizvoda, Apache NetBeans IDE i Apache NetBeans Platform, besplatni su za komercijalnu i nekomercijalnu upotrebu, pod Apache licencom . Izvorni kôd za obje dostupan je svima za ponovnu upotrebu prema potrebi, u skladu s uvjetima korištenja.</p>
+                <h2>XAMPP</h2>
+                <p>Xampp je potpuno besplatan open source serverski paket za jednostavnu intalaciju Apache servera na računala sa operacijskim sustavom Windows, Linux ili macOS. Xampp je namjenjem za upotrebu u lokalnoj mreži ne kao web server i služi prije svega programerima da kreiraju server radi
+                    testiranja svojih skripti, stranica itd. Xampp simulira server u off-line okruženju.</p>
+                <h2>PHPmyAdmin</h2>
+                <p>phpMyAdmin je besplatni alat za administraciju otvorenog koda za MySQL i MariaDB . Kao prijenosna web aplikacija napisana prvenstveno na PHP-u, postala je jedan od najpopularnijih alata za MySQL administraciju, posebno za usluge web hostinga .</p>
+                <h2>FileZilla</h2>
+                <p>FileZilla je besplatni softver, više-platformski FTP program, koji se sastoji od FileZilla Klijenta i FileZilla Servera. Dostupan je za operacijske sustave Windows, Linux i macOS, dok je instalacija servera moguća samo za Windows. Server i klijent podržavaju FTP i FTPS (FTP preko SSL/TLS ), dok se klijent može povezati i sa SFTP serverima</p>
+            </section>
+            <section>
+                <h1>Korištenje vanjskih modula</h1>
+                <h2>Nisu korišteni vanjski moduli</h2>
+            </section>
+            <section>
+                <h1>Opis završenosti projekta</h1>
+                <p>Projekt je završen oko 60-70%, funkcionalnosti neregistriranog korisnika su dovršene, dok kod registriranog korisnika i moderatora nedostaju statistike. Administrator ima 40% funkcionalnosti. Te u radu sustava nedostaje pomak vremena, dnevnik, stranjičenje podataka i poboljšanje korisničkog iskustva.</p>
+                
+            </section>
+        </main>
+
+        <footer>
+            <address>Kontakt: <a href='mailto:ilucic@foi.hr'>Ivan Lucić</a></address><br>
+            <a href='o_autoru.html'>O autoru</a><br>
+            <a href='dokumentacija.html'>Dokumentacija</a>
+            <p>&copy; 2022 I.Lucić</p>
+        </footer>
+
+    </body>
+</html>
